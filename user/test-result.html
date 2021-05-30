@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>CHISU</title>
+    <meta name="description" content="Health Information Systems (HIS) which keeps track of the activities in the ­healthcare industry i.e. the ways in which healthcare services are carried out, results for tests and others alike.">
+    <meta name="twitter:title" content="CHISU">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="../assets/img/logoB.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:image" content="../assets/img/favicon.jpg">
+    <meta name="twitter:description" content="Health Information Systems (HIS) (HIS) which keeps track of the activities in the ­healthcare industry i.e. the ways in which healthcare services are carried out, results for tests and others alike.">
+    <link rel="icon" type="image/png" sizes="500x500" href="../assets/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="500x500" href="../assets/img/favicon.png">
+    <link rel="icon" type="image/jpeg" sizes="500x500" href="../assets/img/favicon.jpg">
+    <link rel="icon" type="image/jpeg" sizes="500x500" href="../assets/img/favicon.jpg">
+    <link rel="icon" type="image/jpeg" sizes="500x500" href="../assets/img/favicon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300i,400,400i,600,600i,700,900">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/b-html5-1.5.6/b-print-1.5.6/cr-1.5.0/r-2.2.2/sc-2.0.0/sl-1.3.0/datatables.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/styles.min.css">
+</head>
+
+<body>
+    <div class="modal fade" role="dialog" tabindex="-1" id="makeAppointment">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Make Appointment</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group"><label class="field-label" for="appDate">Facility<span class="star">*</span></label><select class="form-control input-box select"><optgroup label="Select Hospital Facility"><option value="12" selected="">- Select -</option><option value="13">General Hospital Asokoro</option><option value="14">Federal Medical Hospital Gwarinpa</option><option value="15">Zankili Hospital</option></optgroup></select></div>
+                        <div
+                            class="form-group"><label class="field-label" for="appDate">Appointment Date<span class="star">*</span></label><input class="form-control input-box" id="appDate" type="datetime-local" name="appDate"></div>
+                <div class="form-group"><label class="field-label" for="appDate">Reason for Appointment<span class="star">*</span></label><select class="form-control input-box select"><optgroup label="Select reason for appointment"><option value="12" selected="">- Select -</option><option value="13">Consultancy</option><option value="14">Medical Checkup</option><option value="15">Lab Test</option></optgroup></select></div>
+                <div
+                    class="form-group"><label class="field-label" for="appDate">Details<span class="star">*</span></label><textarea class="form-control input-box"></textarea></div>
+            <div class="form-group"><button class="btn btn1" type="button">Create Appointment</button></div>
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
+    <nav class="navbar navbar-light navbar-expand-md desktop-hidden">
+        <div class="container-fluid"><a class="navbar-brand" id="logo" href="#"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"><i class="icon-options nav-menu-icon"></i></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item" role="presentation"><a class="nav-link nav-link1" href="index.html"><i class="icon-grid mr-2"></i>Dashboard</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link nav-link1" href="facilities.html"><i class="icon-compass mr-2"></i>Facilities</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link nav-link1" href="health.html"><i class="icon-chart mr-2"></i>Health</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link nav-link1" href="messages.html"><i class="icon-bubbles mr-2"></i>Messages<br></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link nav-link1" href="messages.html"><i class="icon-settings mr-2"></i>Settings</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link nav-link1" href="#"><i class="icon-logout mr-2"></i>Log Out</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <div class="container-fluid p-0">
+        <div class="row main-container">
+            <!-- Start: Sidebar -->
+            <div class="col-md-2 sidebar pt-3 pl-4 pr-4 mobile-hidden" id="sidebar">
+                <!-- Start: Logo -->
+                <div class="mb-5"><a href="#"><img class="img-fluid" loading="auto" src="../assets/img/logoB.png" width="70%"></a></div>
+                <!-- End: Logo -->
+                <div class="mb-4"><a class="btn btn-block btn1" role="button" href="#makeAppointment" data-toggle="modal" data-target="#makeAppointment"><i class="icon-pin mr-2 btn-icon"></i>Make Appointment</a></div>
+                <!-- Start: Sidebar Nav -->
+                <ul class="nav flex-column mb-3">
+                    <li class="nav-item"><a class="nav-link active nav-link1" href="#"><i class="icon-grid mr-3 nav-icon"></i>Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link1" href="facilities.html"><i class="icon-compass mr-3 nav-icon"></i>Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link1" href="health.html"><i class="icon-chart mr-3 nav-icon"></i>Health</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link1" href="messages.html"><i class="icon-bubbles mr-3 nav-icon"></i>Messages</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link1" href="settings.html"><i class="icon-settings mr-3 nav-icon"></i>Settings</a></li>
+                </ul>
+                <!-- End: Sidebar Nav -->
+                <div>
+                    <p class="nav-info">More</p>
+                </div>
+                <ul class="nav flex-column mb-3">
+                    <li class="nav-item"><a class="nav-link nav-link1" href="#"><i class="icon-logout mr-3 nav-icon"></i>Log Out</a></li>
+                </ul>
+            </div>
+            <!-- End: Sidebar -->
+            <!-- Start: Main -->
+            <div class="col pt-3 main-column">
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <div class="pull-right mobile-hidden">
+                            <div class="dropleft"><button class="btn dropdown-toggle no-caret dropdown-btn1" data-toggle="dropdown" aria-expanded="false" type="button"><i class="icon-options-vertical"></i></button>
+                                <div class="dropdown-menu" role="menu"><a role="presentation" class="dropdown-item" onclick="myFunction()"><i class="icon-size-actual mr-2"></i>Toggle Show/Hide</a></div>
+                            </div>
+                        </div>
+                        <h5 class="page-title">Test Result</h5>
+                        <div class="alert alert-info mt-3" role="alert"><span><strong>Notice:</strong>&nbsp;All patients are to fill out their bio information on or before the 24th March, 2020</span></div>
+                    </div>
+                    <div class="col">
+                        <div class="card panel1 mt-3">
+                            <div class="card-header panel1-header h-57">
+                                <div class="pull-right"><a class="btn btn2-small" role="button" href="index.html">Go Back</a></div>
+                                <h5 class="mb-0 panel1-heading"><strong>Microbiology Result</strong></h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 p-0">
+                                        <div class="table-responsive table-borderless">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><strong>Requisition Number:&nbsp;</strong>360203050</td>
+                                                        <td><strong>Priority: &nbsp;</strong><span class="badge badge-pill badge-warning badge-y">Medium</span><br></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Order Reference:&nbsp;</strong></td>
+                                                        <td><strong>Comments:</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Collected:&nbsp;</strong><br>22:49 15 Nov 2019<br><br><strong>Report Date:</strong><br>08:58 21 Nov 2019<br><br><strong>Report Updated Date:</strong><br>09:00 21 Nov 2019<br></td>
+                                                        <td><strong>Specimen Type:</strong><br><br><strong>Tests Ordered:</strong><br>Anaerobic Culture; Culture, ID &amp; Sens Swab (PUS); Microscopy Gram<br></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <h5 style="font-weight: 600;">Your&nbsp;Microbiology&nbsp;Results<br></h5>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr class="text-white bg-dark">
+                                                        <th><strong>Test</strong></th>
+                                                        <th><strong>Result</strong></th>
+                                                        <th><strong>Reference Range / (Units)</strong><br></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="text-white bg-secondary">
+                                                        <td>Anaerobic Culture</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bacteriology</td>
+                                                        <td>No Anaerobe Isolated</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="text-white bg-secondary">
+                                                        <td>Culture, ID &amp; Sens Swab (PUS)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bacterial Culture/Antibiogram</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3"><strong>Organism</strong>&nbsp;1 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<strong>Name:</strong>Klebsiella pneumoniae &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<strong>Growth:</strong>Heavy &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<strong>Antibiotics</strong></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr class="text-white bg-dark">
+                                                        <th><strong>Name</strong></th>
+                                                        <th><strong>Result</strong></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>AMIKACIN</td>
+                                                        <td>SENSITIVE</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>AMOX-CLAV</td>
+                                                        <td>RESISTANT</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-group mt-3" role="group"><button class="btn btn3" type="button"><i class="icon-doc mr-2"></i>PDF</button><button class="btn btn3" type="button"><i class="icon-printer mr-2"></i>Print</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End: Main -->
+            <!-- Start: Other Sidebar -->
+            <div class="col-md-2 mobile-hidden" id="sidebar2">
+                <!-- Start: Profile -->
+                <div class="text-center mb-5"><img class="rounded-circle img-fluid img-border" src="../assets/img/000665.jpg" loading="lazy" width="70%">
+                    <div>
+                        <p class="username-p mt-2 mb-0">Ms. China Whyte</p>
+                        <p class="user-title">User</p>
+                    </div>
+                </div>
+                <!-- End: Profile -->
+                <div class="p-2">
+                    <h6 class="sidebar-title mb-3">Notifications</h6>
+                    <div class="media notification">
+                        <div class="sidebar-icon-div mr-3"><i class="icon-envelope sidebar-icon"></i></div>
+                        <div class="media-body">
+                            <h5 class="mb-0"><a class="notification-link" href="../user/messages.html">Month Health Report</a></h5>
+                            <p class="notification-date">1 Jan 2019</p>
+                        </div>
+                    </div>
+                    <div class="media notification">
+                        <div class="sidebar-icon-div mr-3"><i class="icon-envelope sidebar-icon"></i></div>
+                        <div class="media-body">
+                            <h5 class="mb-0"><a class="notification-link" href="../user/messages.html">Month Health Report</a></h5>
+                            <p class="notification-date">1 Jan 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End: Other Sidebar -->
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/b-html5-1.5.6/b-print-1.5.6/cr-1.5.0/r-2.2.2/sc-2.0.0/sl-1.3.0/datatables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.min.js"></script>
+</body>
+
+</html>
