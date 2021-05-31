@@ -1,1 +1,1 @@
-{"short_name":"CHISU","name":"CHISU","icons":[{"src":"/assets/img/favicon.jpg","type":"image/jpeg","sizes":"500x500"},{"src":"/assets/img/favicon.jpg","type":"image/jpeg","sizes":"500x500"}],"start_url":"/index.html","display":"fullscreen","orientation":"portrait"}
+{"short_name":"CHISU","name":"CHISU","icons":[{"src":"https://www.chisu.org/assets/img/favicon.jpg","type":"image/jpeg","sizes":"500x500"},{"src":"https://www.chisu.org/assets/img/favicon.jpg","type":"image/jpeg","sizes":"500x500"}],"start_url":"index.html","display":"fullscreen","orientation":"portrait"}

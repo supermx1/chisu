@@ -4,10 +4,22 @@
         <loc>https://www.chisu.org/facilities/appointments.html</loc>
     </url>
     <url>
+        <loc>https://www.chisu.org/facilities/birth-records.html</loc>
+    </url>
+    <url>
+        <loc>https://www.chisu.org/facilities/case-record.html</loc>
+    </url>
+    <url>
+        <loc>https://www.chisu.org/facilities/death-records.html</loc>
+    </url>
+    <url>
         <loc>https://www.chisu.org/facilities/index.html</loc>
     </url>
     <url>
         <loc>https://www.chisu.org/facilities/messages.html</loc>
+    </url>
+    <url>
+        <loc>https://www.chisu.org/facilities/patient-record.html</loc>
     </url>
     <url>
         <loc>https://www.chisu.org/facilities/patients.html</loc>
@@ -19,7 +31,7 @@
         <loc>https://www.chisu.org/facilities/staffs.html</loc>
     </url>
     <url>
-        <loc>https://www.chisu.org/moh/index.html</loc>
+        <loc>https://www.chisu.org/subadmin/index.html</loc>
     </url>
     <url>
         <loc>https://www.chisu.org/user/appointment-report.html</loc>
