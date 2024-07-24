@@ -1,2 +1,2 @@
-# chisu
-Healthcare Dashboard
+# CHISU
+Free Healthcare Dashboard Template
